@@ -1,0 +1,658 @@
+\documentclass[a4paper]{article}
+\usepackage[skip=13pt]{parskip}
+\usepackage{bm} 
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{wrapfig} 
+\usepackage{setspace} 
+\usepackage{lipsum} 
+\usepackage{cite}
+\usepackage{csquotes} 
+
+\setstretch{1.25}
+\setlength\parindent{0pt}
+
+\title {\textbf{An Analysis of Chronometric Cosmology and The CMB}}
+\author{Nathan Burwig}
+\date  {February 1}
+
+\begin{document}
+    \maketitle
+
+    \begin{abstract}
+        The Cosmic Microwave Background Radiation is often taken as a
+        cornerstone of evidence in contribution to the Standard Model of
+        Cosmology. In the standard model, the CMB is taken to be the light last
+        scattered from the hot and dense plasma permeating the early universe
+        as it cooled approximately 300,000 years after the Big Bang. In this
+        paper, however, the CMB is analyzed from an alternative cosmological
+        model known as The Chronometric Cosmological model. This model
+        considers the cosmos to be a 3-sphere in which light is permitted to
+        take several circuits around the universe before potentially
+        scattering. It is through the phenomenon of light taking circuits about
+        the universe that one can derive the same notion of the CMB in
+        this model. Thus, this paper endeavors to utilize this theoretical
+        framework to derive first order approximations of the average
+        temperature of the CMB as well as it's power spectrum in this model and
+        determine whether or not the model is falsified in light of modern
+        astrophysical data.
+    \end{abstract}
+
+    \newpage
+    \tableofcontents
+    \newpage
+
+    \section{\textbf{Introduction}}
+    In 1927 a paper was published by a man in Belgium in which a compelling
+    solution to Einstein's field equations were made. The man behind the paper,
+    Georges Lema\^{i}tre, had discovered a solution in which the universe was
+    expanding. Unbeknownst to Lema\^{i}tre, however, this solution had already
+    been derived several years ago by Alexander Friedmann, but notably,
+    Friedmann did not place much weight on his derivation. During the Early
+    1920s, Friedmann produced many unique solutions to Einsteins field
+    equations, and was largely concerned with the range of possible solutions
+    as opposed to which of the bunch could be considered the most physical.
+    Lema\^{i}tre, however, attacked the problem of the expanding cosmos in
+    order to attempt to understand how an expanding universe would impact
+    physical theories \cite{amnh}. 
+
+    Lema\^{i}tre's dedication to pursuing the possibility of an expanding
+    universe led him to a rather unique prediction. He supposed that if the
+    universe were expanding, the galaxies and other bodies in the cosmos would
+    be percieved as \textit{redshifted} due to their outward radial velocity.
+    With this he predicted of Hubbles constant and an
+    early iteration of what would become Hubble's law \cite{phyouni}. In a
+    single paper, Georges Lema\^{i}tre had laid the foundation for what would
+    become one of the most robust theories in all of modern physics; The Big
+    Bang Cosmological Model, or what is, today, commonly referred to as the
+    Standard Cosmological Model (SCM). Over the course of a century the SCM
+    would change form slightly, adapting to more and more astrophysical
+    data, however it still remains a titan in the field of cosmology whose
+    predictive capabilities still have no true rival.
+    
+    %Astrophysics as a field is facing one of the most exciting times in history
+    %where the development of increasingly sophisticated technology has ushered
+    %in measurements with accuracy previously unknown to humankind. In
+    %particular, the launch and initialization of the James Web Space Telescope
+    %(JWST) in December 2021 and throughout early 2022 has been a revolutionary
+    %moment in modern astrophysics. Since then, JWST has provided physicists of
+    %various fields countless opportunities to verify or otherwise test the
+    %validity of modern cosmology to an even higher degree of accuracy than the
+    %previous generation of orbital telescopes has allowed. Among these theories
+    %we find the Standard Cosmological Model (SCM) (also called $\Lambda CDM$ or
+    %the Big Bang Theory); a true giant in the field of cosmology.
+    
+
+    %\begin{center}
+    %    [This whole section needs reworking because the transition here doesn't
+    %    make sense,,, need to add a section here to tie it together more]
+    %\end{center}
+
+    The SCM posits that the universe was once an incredibly dense sea of
+    energy, too dense in fact for the formation of familiar matter to take
+    place. This dense sea of energy eventually underwent a period of rapid
+    inflation thus beginning the universe as we know it. This exponentially
+    expanding cosmic soup of energy would eventually slow it's rate of
+    inflation allowing the matter within it to cool substantially causing more
+    familiar states of matter to form. Over the span of billions of years, this
+    matter would take form as stars, galaxies, quasars, and all the other
+    wonderful celestial bodies humanity has been familiarizing ourselves with
+    over the last several millennium.
+
+    Along with the large structure formation of the universe, the SCM notably
+    can predict two of the largest cosmological phenomena. The first being the
+    previously alluded to cosmological redshift. The cosmological redshift in
+    the SCM is considered to be a byproduct of the expanding cosmos where the
+    spectra of light is redshifted as the light travels through the expanding
+    universe. Heuristically it is often described as though the wavelength of
+    the light is being stretched as the space it travels through expands. This
+    redshift has a distinct pattern, and in 1929 Hubble would define it
+    characteristically through Hubble's Law, solidifying the redshift relation
+    in the SCM as a linear relationship given by
+
+    \begin{equation}
+        v = H_0D
+    \end{equation}
+    
+    for $D$ the proper distance, $v$ the recessional velocity, and $H_0$ the
+    Hubble parameter. 
+
+    The second phenomena that has served a critical role in the
+    formulation of the SCM is the Cosmic Microwave Background (CMB). The CMB in
+    a completely phenomenological context is a faint glow of microwave
+    frequency light permeating the universe. It has a spectrum which is very
+    nearly a black body spectrum of temperature $\sim 2.7$ K. However, the CMB
+    exhibits fluctuations in temperature on the order of $10^{-5}$ K
+    \cite{cmb4ped}.
+
+    In the SCM, the CMB is explained in the context of the Big Bang and the
+    years nearly following the first moments of the universe. Principally it is
+    considered to be the last scattering of light in the early universe as the
+    hot ionized matter in the universe gradually cooled. Eventually, it would
+    cool enough to deionize allowing it to become transparent to radiation.
+    Thus light would scatter freely to form the CMB which we see in microwave
+    telescopes today \cite{cmb4ped}. This explanation is widely considered to
+    be the most plausible, and it's predictive capabilities is one of the many
+    reasons the SCM has become such a pillar of cosmology.
+
+    The CMB, along with the cosmological redshift, make up two of the most
+    physically important phenomena in modern cosmology, and the derivation and
+    explanation of them is critical for any theory which wishes to exert
+    explanatory power in the field. Few theoretical frameworks exist which can
+    aptly do so, however few is far from none, and if a potential model proposes an
+    explanation of the universe which is able to reproduce these crucial
+    phenomena, it is worthy of investigation.
+
+    
+    \subsection{Organization of this thesis}
+    This thesis centers around one such alternate cosmological model and in
+    particular it's ability to offer a sufficient explanation for the
+    CMB in a universe far outside the current mainstream of
+    modern cosmology. The model itself is known as the Chronometric
+    Cosmological Model (CCM) and is class of models which is of positive
+    (spherical) curvature. Further, it is a completely static model and thus
+    has no conception of the expansion or contraction of the universe or any
+    notion of a beginning to the universe. It is considered infinite
+    temporally.
+
+    This thesis will first discuss the Big Bang model and some of it's
+    pertinent mathematical properties, then move into the Chronometric Model.
+    The Chronometric Model's mathematical properties will be discussed without
+    explicitly deriving them (an exercise best left to someone of a more purely
+    mathematical inclination). The discussion will then turn to deriving
+    certain important equations in dealing this this universe, namely the
+    "Area" and "Volume" of the cosmos in this model, and a method of acquiring
+    averages over this universe. It will then be possible, using averaging
+    techniques, to make certain determinations about the CMB in the CCM, which
+    will be discussed in section 3.
+
+    Section 4 will then concern itself with the power spectrum of the CMB and
+    how possible calculations of this spectrum are impacted based on various
+    parameters. Finally, we will concluding with a general discussion of the
+    limits and implications of the contents of this thesis in the scope of
+    modern cosmology, along with further points of research to be explored.
+
+    A pertinent question might be related to why this thesis will not be
+    discussing aspects of the cosmological redshift. The reason for this is due
+    to a preexisting (and rather complete) discussion of the redshift having
+    already been conducted by a research colleague Maxwell Kaye in \cite{kaye}
+    and also in Segal \cite{segal_b}
+
+    \newpage
+
+    \section{\textbf{The Models}}
+    In science theories are formulated to explain phenomena and are constantly
+    tested through empirical observation and experimentation. Robust theories
+    that can successfully explain and predict the observed phenomena are
+    generally not subject to modification or reformulation, while theories that
+    fail to do so are subject to revision or replacement. Thus, a natural
+    question to arise when discussing alternate cosmological models is:
+    \textit{what exactly is wrong with the current model}?
+
+    The answer, truthfully, is a rather limited. As stated previously, the SCM
+    has proven to be a reliable and robust framework for understanding the
+    universe. It has successfully predicted and explained a wide spread of
+    phenomena. This is not to say, however, that the model does not have any
+    unresolved issues. Over the course of the last century, many such issues
+    have been resolved, but as telescopes continue probing deeper and deeper into
+    universe with progressively more advanced means of measurement, they may
+    yet find more unsolved mysteries.
+
+    One such example which has become pertinent quite recently is relating to
+    large structure formation in the early universe. The James Webb Space
+    Telescope (JWST) in a recent paper has discovered a set of galaxies of
+    uncharacteristically large mass given their redshift. The paper titled
+    \textit{A population of red candidate massive galaxies $\sim$600 Myr after the
+    Big Bang} by Labb\`{e} et al. reported...
+
+    \begin{displayquote}
+        Galaxies with stellar masses as high as $\sim 10^{11}$ solar masses
+        have been identified out to redshifts z $\sim$ 6, approximately one
+        billion years after the Big Bang... Here we make use of the 1-5 $\mu$m
+        coverage of the JWST early release observations to search for 
+        intrinsically red galaxies in the first $\approx$ 750 million years of cosmic
+        history. In the survey area, we find six candidate massive galaxies
+        (stellar mass $> 10^{10}$ solar masses) at $7.4 \le z \le 9.1$, 500–700 Myr
+        after the Big Bang, including one galaxy with a possible stellar mass
+        of $\sim 10^{11}$  solar masses. If verified with spectroscopy, the stellar
+        mass density in massive  galaxies would be much higher than
+        anticipated from previous studies based on rest frame
+        ultraviolet-selected samples.
+    \end{displayquote}
+
+    In all, the paper goes on to describe possible explanations for such a
+    discrepancy at such a large redshift, but in general we can see this as a
+    clear example of how possible mysteries can arise in modern cosmology
+    \cite{labbe}.
+
+    Another example of unresolved issues in the SCM can be found in the
+    cosmological redshift. For much of the model's existence, the cosmological
+    redshift has existed as means by which light loses energy by no apparently
+    mechanism. The wavelength of the light is simply "stretched" causing it's
+    energy to seemingly vanish into the cosmos. This problem would eventually
+    be dubbed the \textit{cosmic sink} by Hermann Bondi, and it is a problem
+    which has led to dissatisfaction by some physicists. One of which was
+    Irving Segal who was troubled by this apparent violation of the
+    conservation of energy. In hopes of restoring this grand scale energy
+    conservation, Segal developed the Chronometric Cosmology\footnotemark, which is
+    precisely where this story picks up. 
+
+    \footnotetext{This development was primarily conducted via his 1976 book
+    \textit{Mathematical Cosmology and Extragalactic Astronomy}\cite{segal_b},
+    however much of the mathematical framework regarding the CMB is found in other
+    papers such as \cite{segal_cmb} and \cite{segal_spinor}}
+
+    \subsection{Development of the Chronometric Cosmos}
+    basically want to start with the axioms then move into there being only two
+    admissable world manifolds. be sure to mention that M is embedded in barM,
+    and to mention the motivation being from conformally symmetric groups
+    (probably start with this \textit{find a god damned quote in his book about
+    this}
+
+    
+
+
+
+
+    %The Chronometric Cosmological Model is one that describes a universe
+    %vastly different in character than that which most are used to. As such it
+    %is worth devoting a portion of this writing to a qualitative description of
+    %this universe, and how one can explain the cornerstones of any good
+    %cosmological model (redshift and CMB) within the CCM. 
+
+    %That said, in order to aptly describe the CCM, we should first recap
+    %and familiarize ourselves with the relevant physical and mathematical properties 
+    %in SCM.
+
+
+
+    %\subsection{The Standard Picture}
+    %There are several unique properties of the 
+    %\subsection{Motivation}
+    %\subsection{The Metric}
+    %\subsection{The Cosmological Redshift}
+    %\subsection{The Chronometric Cosmology}
+    %Displeased with cosmic sink
+    %\subsubsection{Development}
+
+    \newpage
+
+    \section{\textbf{The Cosmic Microwave Background}}
+    \subsection{Determination of Black Body}
+    \subsection{Average Temperature of CMB}
+    
+    The average temperature of the CMB is a critical aspect of the CMB as a
+    phenomenon in the universe. This, along with the power spectrum characterize
+    the primary features of the CMB, and thus, if the chronometric model is able to
+    reproduce these aspects of the CMB, we can say that the model is, if nothing
+    else, not falsified in light of modern astrophysical data. In order to
+    determine these attributes from first principle, however, it is important to
+    first get the bigger picture of how the CMB is accounted for within this model.
+    
+    Light in the chronometric cosmos is broadly separated into two categories. The
+    first we call pristine light, and the second we call residual. We call the
+    light that has taken fewer than one half-cycle about the cosmos pristine and
+    the light which has passed the $\rho = \pi$ manifold distance residual. The CMB
+    then is concerned primarily with the residual light in the universe. 
+    
+    Given the relative sparsity of matter in the universe, light of this category
+    would be able to take many circuits about the universe. The infinite time for
+    this high-dispersion radiation to accumulate would directly imply that it is
+    qualitatively distributed in accordance to Planck’s law, and thus is in fact a
+    black body spectrum.  
+    
+    \begin{center}
+        [This will initiate the section on Plank law and that general
+        calculation].  
+    \end{center}
+    
+    It is worth noting before continuing that the origin of this light is
+    unimportant for general considerations.  However for a more specific analysis
+    we can easily consider the source of the pristine and residual  light in the
+    universe to be the galaxies and other luminous matter in the universe. 
+    
+    To show that the residual light is characteristic of a black body spectrum, we
+    need only point to the stochastic nature of of the emission and motion of
+    galaxies and other luminous material.
+
+    \begin{center}
+        [This will end the Planck law calculation and start the extinction
+        calculation]. 
+    \end{center}
+
+    \subsubsection{Methodology}
+    
+    The  methodology, then, for determining the average temperature of the CMB
+    in this model will be to utilize the residual light in the cosmos. The
+    residual light will be considered explicitly as the light "left over" after
+    traversing multiple half circuits of the cosmos, and is thus the
+    light which has \textit{not} gone extinct. The residual light is considered
+    to be of particular importance as, given the curvature of $\bar{M}$, it is
+    allowed to continue traversing the universe becoming of higher and higher
+    dispersion, directly contributing to the CMB.
+
+    This analysis will be quite general and is only intended to act as a first
+    order approximation to the average temperature to the CMB. As such, a
+    handful of approximations must be clarified. We will consider
+    all galaxies to be \textit{approximately} the same in radius ($d$),
+    luminosity ($L$), and have an explicit number count ($N$). Each galaxy is
+    approximated as a perfect absorbing sphere as well as an emitter of light.
+    Using these factors we will calculate on average the amounts of pristine
+    and residual light in the universe, and what of that reaches the Earth
+    which will give us qualitative information regarding the CMB in this model.
+    We will then utilize that to determine a range of values for the average
+    temperature of the CMB.
+
+    \subsubsection{Extinction Law}
+    For a general order of magnitude estimate of the total radiative flux of
+    the CMB which arrives at the Earth in the $\mathbb{S}^3$ cosmos, we first
+    need to consider extinction of light as light takes half-circuits about
+    the closed universe. 
+
+    In general, we know that that the rate of change of photons ($N_p$)
+    traversing $\bar{M}$ will be negative and proportional to the number of
+    half-circuits ($n$) in accordance with general stochastic
+    absorption of light. Using this simple relationship we can construct the
+    following.
+    \begin{equation*}
+        \frac{dN_p}{dn} = -\alpha n \; \longrightarrow\; N=N_{p_0}e^{-\alpha n}
+    \end{equation*}
+    For $N_{p_0}$ the amount of light which has not yet taken a half circuit
+    about the universe, which formally makes it the pristine light $P$. This
+    allows us to consider the total amount of scattered light $N_{p_0}-N$.
+    \begin{equation*}
+        N_{p_0}-N = N_{p_0}-N_{p_0}e^{-\alpha n} \approx N_{p_0}e^{-\alpha n}
+    \end{equation*}
+    With the identification of $N_{p_0}$ as the pristine light $P$, we can then
+    arrive at the following expression for extinction of light in the universe.
+    \begin{equation}
+        Pe^{-\alpha n}
+    \end{equation}
+    This expression is of course per half-circuit $n$. For the purposes of
+    determining the extinction of light over any $n$ circuits the summation
+    to infinity must be taken. For the purposes of this analysis, $n$ will be
+    taken to start at 1 as this must be an examination of the residual light
+    implying one half-circuit has been taken.
+    \begin{equation*}
+        P\; \sum_{n=1}^{\infty} e^{-\alpha n} = P \left[e^{-\alpha} +
+            e^{-2\alpha} + \cdots \right] = \frac{P}{1-e^{-\alpha}} 
+    \end{equation*}
+    In order to further simplify this expression an approximation
+    via Taylor Series expansion is utilized. Given the Taylor series expansion
+    for $e^{-\alpha}$, the following is known.
+    \begin{equation*}
+        e^{-\alpha} = 1 - \alpha + O[\alpha]^2
+    \end{equation*}
+    From here all greater order terms will be taken as negligible as Segal
+    determined that for general considerations $\alpha$ is considerably less
+    than one \cite{segal_b}. Removing the higher order terms in this
+    approximation allows for a massive simplification in the given expression
+    leaving us with the following.
+    \begin{equation}
+        P\alpha^{-1}
+    \end{equation}
+    Before continuing on to determine what exactly these parameters are in the
+    context of the CCM, we should stop briefly to consider the physical meaning
+    of this expression.
+
+    In typical considerations of the standard flat Minkowski spacetime $M$, as
+    light radiates away from emitters, it is free to traverse the infinite
+    plane of the cosmos until it is scattered. Thus, the average amount of light will
+    always decrease irrespective of continuous emission of light from other
+    sources in the cosmos. However, in the case of $\bar{M}$, light is permitted
+    to continue taking circuits about the universe while the emitters continue
+    radiating. This shows us that the residual light will contribute to the net
+    luminous flux over many cycles, which is precisely what allows the CMB to
+    take form in the CCM. In this way, we can consider that from the
+    theoretical framework of Segal's model, the CMB is not merely explained,
+    but it is, in fact, \textit{predicted}.
+
+    The next steps, then, are of course to consider how we can determine the
+    approximate values for the pristine and residual light from the principles
+    already discussed in the CCM.
+
+    \subsubsection{Residual Light Calculation}
+
+    To start, we consider how one can calculate the residual light in the
+    cosmos. As stated before, we consider this light to be the light which has
+    \textit{not} gone extinct. In this case, then, we need only consider the
+    amount of light that arrives at the Earth, as this is the only light which
+    we can factor into the chronometric model's explanation of the CMB. In
+    order to calculate this, then, we can shift the question to be how much
+    light is absorbed by galaxies in the universe en route to the Earth?
+
+    We consider the general volume\footnotemark of $\mathbb{S}^3$  as a
+    function of the manifold distance $\rho$.
+
+    \footnotetext{Explicitly we should be calling this the hypervolume and
+    consequently the hypersurface and hypersurface area. However, for the
+    sake of readability and writing slightly more succinctly, we will
+    generally refer to the hypersurface area and hypervolume as surface
+    area and volume respectively}
+
+    \begin{equation}
+        V(\rho) = 2 \pi R^3 \left[\rho-\cos(\rho)\sin(\rho)\right]\footnotemark
+    \end{equation}
+
+    \footnotetext{It is worth noting that in Segal's own work he develops a
+        slightly different equation for the volume of $\mathbb{S}^3$. The exact
+        expression he derives, however, is only a modulus of the expression we have
+        derived in the context of this thesis, and is thus treated as only varying
+        by some constants (in this case it varies by $4 \pi R^3$). It will
+        later become apparent that these constants are of little significance to
+        the endpoint of this calculation.}
+
+    We can then characterize the surface area as follows...
+    \begin{equation}
+        A(\rho) = 4 \pi R^3 \sin^2(\rho)
+    \end{equation}
+    As we have derived previously, we can utilize these expressions to develop
+    a general expression for the normalized surface area over $\mathbb{S}^3$.
+    We derive the following normalization factor over the integral from $0$ to
+    $\pi$ (ie the entire surface).
+    \begin{equation}
+        Q = \int^\pi_0 A(\rho) \;d\rho
+          = \int^\pi_0 4 \pi R^3 \sin^2(\rho) \;d\rho
+          = 2 \pi^2 R^3
+    \end{equation}
+    From here we can find the average value of any function of $\rho$ by
+    utilizing this normalization factor in the following way.
+    \begin{equation}
+        F(\rho) = \int_0^\pi \frac{A(\rho)}{Q} \; f(\rho) \;d\rho
+    \end{equation}
+    Where the integral goes from 0 to $\pi$ for the sake of averaging over the
+    entire surface.
+
+    With this framework we can now turn our attention to what exactly it is we
+    wish to be finding the average value of. It has been noted that we are
+    interested in the amount of light occluded by our approximated galaxy
+    objects at any given point in the cosmos (for posterity we consider Earth
+    to be our point of relevance). Thus we are interested purely in the
+    percentage of the sky taken up by such objects, and therefore we want to
+    know the percentage of solid angle taken up by $N$ galaxies.
+
+    We define the solid angle as the field of view obstructed by an object at
+    some distance. In the consideration of celestial bodies, we can simply take
+    the solid angle to be given as follows.
+    \begin{equation*}
+        \Omega = 2\pi\left(1-\cos(\theta)\right) = 4\pi\sin^2\left(\frac{\theta}{2}\right) 
+    \end{equation*}
+    We now consider that for any general consideration of a distribution of
+    galaxies, we can consider them to be quite far away. Thus, utilizing small
+    angle approximations, we can arrive at the following.
+    \begin{equation}
+        \Omega = \pi \theta^2
+    \end{equation}
+    Or the area of the central cross section of our sphere typically called the
+    great circle of our sphere. In this approximation, $\theta$ is
+    characterizing the radius of of the great circle of the sphere. Thus
+    $\theta$ is formally $d$ in the small angle approximation.
+
+    For considerations of the ratio of the sky obstructed by the absorbing
+    spheres, we must carefully consider the geometry of the situation. If it
+    were the case that we were in typical flat Minkowski space $M$, then we
+    would take no issue and simply take our ratio with respect to the total
+    surface area of the sphere which we project or solid angle onto. However,
+    given that, in $\bar{M}$ an object at $\rho=\frac{\pi}{4}$ and an object at
+    $\rho=\frac{3\pi}{4}$ will take up the same $\Omega$, we must utilize the
+    surface area component of $\mathbb{S}^3$. Thus, our equation for the ratio
+    of solid angle obstructed by a single spherical absorber of radius $d$
+    becomes the following.
+    \begin{equation*}
+        \frac{\Omega}{\Omega_{total}} = \frac{\pi d^2}{4 \pi R^3 \sin^2(\rho)} 
+    \end{equation*}
+    Thus for a general case of $N$ such bodies we arrive at...
+    \begin{equation*}
+        \frac{\Omega}{\Omega_{total}} = \frac{N \pi d^2}{4 \pi R^3 \sin^2(\rho)} 
+    \end{equation*}
+    Now we can consider the average based on our formulation of equation (5)
+    substituting $\frac{\Omega}{\Omega_{total}}$ for $f(\rho)$. 
+    \begin{equation*}
+        F_{\Omega}(\rho) = \int_0^\pi \frac{A(\rho)}{Q} 
+        \;        \frac{\Omega}{\Omega_{total}}  \;d\rho 
+                 = \int_0^\pi \frac{N d^2}{2 \pi R^3} \;d\rho
+    \end{equation*}
+    Thus...
+    \begin{equation}
+        F_{\Omega}(\rho)= \frac{N d^2}{2 R^3} 
+    \end{equation}
+    This value for the average absorption of light is in fact exactly 
+    identified as the residual light $\alpha$ in (3).
+
+
+    \subsubsection{Pristine Light Calculation}
+    The consideration of the pristine light in the cosmos will follow very
+    similarly to the former as the calculation is yet another average over the
+    cosmos. Now, however, it is not about their properties as absorbers, but
+    instead their properties as emitters. 
+
+    As stated, we consider each galaxy to have identical properties for the
+    sake of a first (or zeroth) order calculation. As such we take each galaxy
+    to have uniform luminosity $L$, and define their flux as follows.
+    \begin{equation}
+        \phi = \frac{L}{4 \pi R^3 \sin^2(\rho)} 
+    \end{equation}
+    For now, we will characterize our expression not in terms of the luminosity,
+    but instead in terms of flux. General considerations in of the average
+    pristine light in terms of luminosity will be conducted, however for now it
+    suffices to consider our average over with flux in mind.
+
+    Given that the Earth itself rests in the Milky Way galaxy, and ultimately
+    our interests are centered around determining values for the average
+    temperature of the CMB as detected on Earth, we can make a useful and
+    simplifying assumption. This is a) that the Milky Way is considered an
+    average galaxy in the cosmos\footnotemark and b) the Earth rests at
+    approximately the halfway point between the center of the galaxy and it's
+    furthest edge (at the radial point $\frac{d}{2}$).
+
+    \footnotetext{This may or may not be the case exactly, and this will be
+    discussed at greater length in 3.2.5}
+
+    Conceding these assumptions, we can take the luminosity of an average
+    galaxy in terms of the flux originating from the Milky Way that is received
+    by the Earth. Doing so results in the following expression.
+    \begin{equation}
+        L = 4 \pi \phi_e (\frac{d}{2})^2
+    \end{equation}
+    Where $\phi_e$ is the aforementioned flux of the Milky Way received by the
+    Earth. Notably we utilize the standard spherical surface area formula for
+    this expression as the curvature of the universe is imperceptible on the
+    scales of an individual galaxy and thus considerations of its larger
+    topology are unnecessary.
+
+    From here we can utilize equation (7) to find the average pristine light in
+    terms of $\phi_e$ and given that we are approximately at $\frac{d}{2}$.
+    \begin{equation*}
+        F_{\phi}(\rho) = \int_0^{\pi} \frac{A(\rho)}{Q} \; \frac{L}{4 \pi R^3
+        \sin(\rho)}  \; d\rho
+        = \int_0^{\pi} \frac{A(\rho)}{Q} \; \frac{\pi \phi_e d^2}{4 \pi R^3
+        \sin(\rho)}  \; d\rho
+    \end{equation*}
+    Which results in the following expression.
+    \begin{equation}
+        F_{\phi}(\rho) = \phi_e \frac{N d^2}{\pi R^3} 
+    \end{equation}
+    This, then, is the average pristine light $P$ in the cosmos as identified
+    in (3).
+
+    \subsubsection{Average Temperature of CMB}
+    The tools for calculating the average temperature of the CMB have now been
+    derived. The discussion of the average pristine and residual light in the
+    cosmos has been conducted and the relationship between the two has given us
+    an explicit way to calculate the total flux of light in the cosmos. Given
+    expression (3), we can now substitute the calculated values of $P$ and
+    $\alpha$ to see that the net flux of the CMB arriving at the Earth is
+    simply $\phi_e$.
+    \begin{equation*}
+        P\alpha^{-1} = \phi_e \frac{N d^2}{2R^3} \left[\frac{N d^2}{2
+        R^3}\right]^{-1} = \phi_e
+    \end{equation*}
+    The uniqueness of this result cannot be overstated. Due to the form of the
+    calculations conducted we see that the terms relating to the radius of the
+    $\mathbb{S}^3$ manifold, the number count of galaxies, and the radius of
+    the average galaxy, all drop out of our expression and leave us with
+    $\phi_e$. Of course, this varies under considerations of our assumptions.
+    For instance, our position in the Milky Way could be closer to
+    $\frac{3}{4}d$ which would alter our solution accordingly. For the purposes
+    of a zeroth order calculation, however, we will consider $\frac{d}{2}$ to
+    suffice.
+
+    The question, now, is how to acquire the average temperature of the CMB
+    from all of this. 
+
+    In 3.2.1 it is shown that the CMB in the CCM is taken to be a perfect black
+    body spectrum. As such, we can utilize the Stefan-Boltzmann equation to
+    determine the temperature of the radiative flux density of a black body
+    spectrum.
+    \begin{equation}
+        J = \sigma T^4 \longrightarrow {T=\left[\frac{J}{\sigma}\right]^{\frac{1}{4}}}
+    \end{equation}
+    For $J$, the radiative flux density which here we take to be $\phi_e$, 
+    $\sigma$ the Stefan-Boltzmann constant ($5.67 × 10^{-8} \frac{W}{m^2
+    K^4}$), and $T$ the temperature\footnotemark. 
+
+    \footnotetext{It should be noted that the more general expression of the
+        Stefan-Boltzmann relation includes the factor of $\epsilon$ or
+        emissivity. However, the emissivity of a perfect black body is simply 1.}
+
+    %%
+    %%  The following is commented out as it feels like it is best suited for a
+    %%  section later in data analysis or something along those lines.
+    %%
+
+    %Determination of the precise radiative flux density of the Milky Way galaxy
+    %as detected on Earth is highly non-trivial in general, however certain data
+    %is available. In \textit{The surface brightness of the Galaxy at the solar
+    %neighbourhood}, the optical surface brightness of the Milky Way is
+    %determined utilizing various optical and infra-red surveys to obtain one of
+    %the few modern, multi-wavelength estimates. Melchoir et al
+    %compare various estimates sets as the USNO-A2 Pioneer $10/11^a$ while also
+    %utilizing their own unique determination via data sets like Hipparcos and
+    %COBE/DIRBE\cite{melchoir}. 
+
+    %The estimations offered in \cite{melchoir} offer a wide set of data points
+    %for the surface brightness of the Milky Way varying from as low as $2.433\;
+    %W/m^{-2}$ up to $10.34\;W/m^{-2}$. Utilizing the two extremal points of the
+    %data offered by Melchoir yields values ranging from $2.559$ K up to
+    %$3.675$ K in comparison to the experimentally accepted temperature of
+    %$2.725$ K \cite{fixsen}
+
+    %\subsubsection{Luminosity Considerations}
+    %Given the difficulty of determining the radiative flux of the Milky Way in
+    %the solar neighborhood it may prove advantageous to consider conducting the
+    %above calculations from the perspective of luminosity. 
+
+    %\subsubsection{Implications and Further Study}
+
+
+    \subsection{CMB Power Spectrum}
+    The CMB Power Spectrum is an equally important characteristic of the CMB  
+
+    basically need to link discussion of residual light to this sort of
+    simulation approach to the problem. layout the basic idea of separation of
+    the clusters and breakdown of structures then show plots then discuss
+    sensitivity and whatnot.
+
+    \subsubsection{Methodology}
+\end{document}

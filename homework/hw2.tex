@@ -1,0 +1,85 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setlength{\parindent}{0pt}
+
+\title{Homework 2/3}
+\author{Nathan Burwig}
+
+\begin{document}
+    \maketitle
+
+    \section*{Problem 1}
+    Take a vector $x=x^1e_1+x^2e_2+...+x^ne_n$ with components $x^i$ in the
+    basis ${e_i}$. Let ${e'_i}$ be a new basis and a transformation matrix A
+    between ${e_i}$ and ${e'_i}$ given by a set of linear equations: \\
+    
+ 
+    \setlength{\leftskip}{3cm}
+     $e'_1 = a_{11}e_1+a_{12}e_2+...+a_{1n}e_n$ \\
+      .\\
+      .\\
+     $e'_n = a_{n1}e_1+a_{n2}e_2+...+a_{nn}e_n$ \\
+     
+
+    \setlength{\leftskip}{0cm}
+
+
+     In the new basis, vector x can be written as
+     $x'=x'^1e'_1+x'^2e'_2+...+x'^ne'_n$, it will have different components,
+     but it is the same vector $x=x'$.\\
+
+     Find how the components of vector transform under base change given by $A$
+     - substitute for {$e'_i$} and find the transformation between $x_1,$
+     $x_2...x_n$ and $x'_1,x'_2...x'_n$
+
+     
+     \section*{Problem 2}
+     The notation is $x^k$ for components of a contravariant vector (tensor of
+     rank 1 - tensor with 1 contravariant index and 0 covariant indices) and
+     $x_k$ for a covariant vector.\\
+
+     If base vectors transform like:\\
+
+     \qquad$e_{k'}=A_{k'}^{i} e_i$, or $e'=Me$, or $e=M^{-1}e'$\\
+
+     Then a contravariant vector (like a position vector) transforms like:\\
+
+     \qquad$x_{k'}=A^i_{k'}x_i$, or $x' = Mx$\\
+
+     in the same way as coefficents of a linear 1-form
+     $f(x)\rightarrow\mathbb{R}$:\\
+
+     \qquad $f_{k'}=A^i_{k'}f_i$, or $f'=Mf$\\
+
+     Show explicitly, that the gradient of a scalar function taken with respect
+     to a contravariant vector transforms like a covariant vector, and a
+     derivative of a scalar function with respect to a covariant vector
+     transforms transforms like a contravariant vector.\\
+
+     \section*{Problem 3}
+     Take an anti-symmetric bilinear form $f_{i,j}=-f_{i,j}$ in 3-dimensions -
+     see the handout where it is shown how coefficients of a 1-form transform,
+     and do the same for an anti-symmetric 2-form
+     $f(a,b)=-f(b,a)\rightarrow\mathbb{R}$, where $a,b$ two vectors (a linear
+     two-form is a function which takes two contravariant vectors as arguments
+     and gives a number in a field over which the vector field is defined - in
+     our case it is $\mathbb{R}$)\\
+
+     Make the identification $g^1=f_{23}, g^2=f_{31}, g^3=f_{12}$\\
+
+     Show that components $g^1$ transform under a base transformation {$e_k$}
+     $\rightarrow$ {$e_{k'}$} given by $e_{k'}=A^i_{k'}e_i$, or $e'=Me$\\
+
+     Like $g'=det(M)M^{-1}g$\\
+
+     Notice that a covariant vector transforms like $x'=M^{-1}x$.\\
+
+     What we call a vector product in 3D of two vectors $\vec a$ and $\vec b$,
+     $\vec c = \vec a$ is really an object which is a result of identifying the
+     coefficients of an anti-symmetric two form $f_{i,j}(a,b).a$ with
+     $f^k=\epsilon_{ijk}f_{ij}=c$, where $\epsilon_{ijk}$ is the completely
+     antisymmetric Levi-Civirta symbol (or tensor).
+    
+\end{document}

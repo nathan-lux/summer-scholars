@@ -1,0 +1,90 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2403,         80]
+NotebookOptionsPosition[      1670,         57]
+NotebookOutlinePosition[      2072,         73]
+CellTagsIndexPosition[      2029,         70]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Skymap Production via Void Slicing", "Title",
+ CellChangeTimes->{{3.889047168857747*^9, 
+  3.889047197560903*^9}},ExpressionUUID->"1cdba693-7b4c-48e5-aa99-\
+ca66355d0cad"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Attempting to reproduce the CMBR Power Spectrum in chronometric cosmology\
+\>", "Section",
+ CellChangeTimes->{{3.889047235630834*^9, 
+  3.889047263794729*^9}},ExpressionUUID->"31267f40-85ca-432a-8a29-\
+9484601bcdfd"],
+
+Cell[CellGroupData[{
+
+Cell["Outline of the Math", "Subsection",
+ CellChangeTimes->{{3.889047268709704*^9, 
+  3.889047298442802*^9}},ExpressionUUID->"f75b4eb8-8c3d-4f54-b308-\
+425e32de6919"],
+
+Cell["\<\
+The general goal of this notebook is to create a map of the sky by \
+distributing super clusters of galaxies (comprised of varying numbers of \
+clusters which then contain a variable number of galaxies) in the 3-sphere \
+cosmos \
+\>", "Text",
+ CellChangeTimes->{{3.889047310279498*^9, 3.889047382561968*^9}, {
+  3.889048670885344*^9, 
+  3.889048718269153*^9}},ExpressionUUID->"71830f1e-963b-4799-9d1f-\
+53fe456aaecc"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{856.5, 734.25},
+WindowMargins->{{Automatic, 28.5}, {28.5, Automatic}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0d211b2b-7e76-4928-8697-545fcb7a6c7a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 177, 3, 98, "Title",ExpressionUUID->"1cdba693-7b4c-48e5-aa99-ca66355d0cad"],
+Cell[CellGroupData[{
+Cell[782, 29, 226, 5, 107, "Section",ExpressionUUID->"31267f40-85ca-432a-8a29-9484601bcdfd"],
+Cell[CellGroupData[{
+Cell[1033, 38, 167, 3, 54, "Subsection",ExpressionUUID->"f75b4eb8-8c3d-4f54-b308-425e32de6919"],
+Cell[1203, 43, 427, 9, 58, "Text",ExpressionUUID->"71830f1e-963b-4799-9d1f-53fe456aaecc"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

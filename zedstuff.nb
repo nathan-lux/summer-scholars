@@ -1,0 +1,429 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15597,        421]
+NotebookOptionsPosition[     13084,        374]
+NotebookOutlinePosition[     13483,        390]
+CellTagsIndexPosition[     13440,        387]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+So in general we will take the luminosity to be the apparent luminosity such \
+that we can account for the dilution of the energy due to redshift.\
+\>", "Text",
+ CellChangeTimes->{{3.8917723134007187`*^9, 
+  3.89177234588096*^9}},ExpressionUUID->"68f9e192-472d-4877-9557-\
+06967bda3e09"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{"L", ",", "a", ",", "d", ",", "r", ",", "P"}], "]"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Apparent", " ", "luminosty", " ", "is", " ", "\[Phi]", " ", "and", " ", 
+    "Q", " ", "is", " ", "the", " ", "normalization", " ", "factor"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]", "=", 
+   FractionBox["L", 
+    RowBox[{"4", "\[Pi]", " ", 
+     SuperscriptBox["R", "3"], 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "\[Rho]", "]"}], "2"], 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox[
+        RowBox[{"Tan", "[", "\[Rho]", "]"}], "2"]}], ")"}]}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Q", "=", 
+   RowBox[{"4", "\[Pi]", " ", 
+    SuperscriptBox["R", "3"], 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "\[Rho]", "]"}], "2"], 
+     RowBox[{"2", " ", 
+      SuperscriptBox["\[Pi]", "2"], " ", 
+      SuperscriptBox["R", "3"]}]]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8917435156319103`*^9, 3.8917435628056726`*^9}, 
+   3.8917436065631733`*^9, {3.891743646187999*^9, 3.8917437042651052`*^9}, {
+   3.891743753587241*^9, 3.891743770643386*^9}, {3.891745631806987*^9, 
+   3.891745646009001*^9}, {3.891745943461958*^9, 3.891745972437254*^9}, 
+   3.891771848058414*^9, {3.8917719482916594`*^9, 3.891771958770515*^9}, {
+   3.891772018266201*^9, 3.891772018342572*^9}, {3.891772074675769*^9, 
+   3.8917720754141827`*^9}, {3.891772306681698*^9, 3.8917723076664057`*^9}, {
+   3.891772355068015*^9, 3.891772370624807*^9}, {3.891772780278097*^9, 
+   3.89177278058998*^9}},
+ CellLabel->
+  "In[177]:=",ExpressionUUID->"72334625-5e7f-4964-a4e0-a8f34dc85a5d"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Our", " ", "integrand", " ", "is", " ", "N", " ", "times", " ", "the", " ",
+    "apparent", " ", "flux", " ", "of", " ", "a", " ", "single", " ", 
+   "galaxy", " ", "\[Phi]", " ", "times", " ", "the", " ", "normalization"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.8917723749271517`*^9, 
+  3.8917723937261963`*^9}},ExpressionUUID->"612f6775-cc5d-482e-aa3f-\
+9b85582d6830"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", " ", "Q", " ", "\[Phi]"}]], "Input",
+ CellChangeTimes->{{3.891744267094733*^9, 3.8917442696630497`*^9}},
+ CellLabel->
+  "In[180]:=",ExpressionUUID->"d787393d-ca7b-4104-b5f2-cb6075ce8b5b"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"L", " ", "N"}], 
+  RowBox[{"2", " ", 
+   SuperscriptBox["\[Pi]", "2"], " ", 
+   SuperscriptBox["R", "3"], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     SuperscriptBox[
+      RowBox[{"Tan", "[", "\[Rho]", "]"}], "2"]}], ")"}]}]]], "Output",
+ CellChangeTimes->{
+  3.89174427056314*^9, 3.891745649936274*^9, 3.891745693408196*^9, {
+   3.891745959676312*^9, 3.891745976028809*^9}, 3.8917460109345417`*^9, 
+   3.8917718519295597`*^9, {3.891771936598267*^9, 3.8917719617117367`*^9}, {
+   3.891772020807786*^9, 3.891772039407297*^9}, 3.891772077974884*^9, 
+   3.8917726101000023`*^9, 3.891772784368458*^9},
+ CellLabel->
+  "Out[180]=",ExpressionUUID->"48cdc964-3cba-40a0-ad10-722131ee2b78"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Here", " ", "we", " ", "integrate"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.891772397377013*^9, 
+  3.8917724095979013`*^9}},ExpressionUUID->"fdbd13f3-41a1-48a3-9650-\
+8d9f001a932f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"P", "=", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"N", " ", "\[Phi]", " ", "Q"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Rho]", ",", "0", ",", "\[Pi]"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L", " ", "=", " ", 
+   RowBox[{"4", "\[Pi]", " ", 
+    SuperscriptBox["d", "2"], " ", "\[CapitalPhi]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"P", ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Integral of N\[Phi]Q:  \>\"", ",", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"N", " ", "\[Phi]", " ", "Q"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Rho]", ",", "0", ",", "\[Pi]"}], "}"}]}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Luminosity (absolute) near galaxy:   \>\"", ",", "L"}], " ", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Substitution of a with L:  \>\"", ",", " ", "a"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.891743706258831*^9, 3.891743731690853*^9}, {
+  3.891771889780518*^9, 3.8917719082425623`*^9}, {3.891772012747817*^9, 
+  3.891772029169711*^9}, {3.891772411733266*^9, 3.8917725909286213`*^9}, {
+  3.891772769129388*^9, 3.891772772088262*^9}},
+ CellLabel->
+  "In[181]:=",ExpressionUUID->"8adbc02a-2576-45f0-baeb-bce68a64548d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Integral of N\[Phi]Q:  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["d", "2"], " ", "N", " ", "\[CapitalPhi]"}], 
+    SuperscriptBox["R", "3"]]}],
+  SequenceForm[
+  "Integral of N\[Phi]Q:  ", $CellContext`d^2 
+   N $CellContext`R^(-3) $CellContext`\[CapitalPhi]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.89177248698915*^9, 3.8917724917973213`*^9}, {
+   3.891772586521865*^9, 3.891772612271682*^9}, 3.891772785910625*^9},
+ CellLabel->
+  "During evaluation of \
+In[181]:=",ExpressionUUID->"18f10d02-1cef-429f-9a70-c3d8fac3e871"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Luminosity (absolute) near galaxy:   \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"4", " ", 
+    SuperscriptBox["d", "2"], " ", "\[Pi]", " ", "\[CapitalPhi]"}]}],
+  SequenceForm[
+  "Luminosity (absolute) near galaxy:   ", 4 $CellContext`d^2 
+   Pi $CellContext`\[CapitalPhi]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.89177248698915*^9, 3.8917724917973213`*^9}, {
+   3.891772586521865*^9, 3.891772612271682*^9}, 3.89177278591427*^9},
+ CellLabel->
+  "During evaluation of \
+In[181]:=",ExpressionUUID->"569cc352-93ad-4131-a4cd-53c6df5b16dc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Substitution of a with L:  \"\>", "\[InvisibleSpace]", "a"}],
+  SequenceForm["Substitution of a with L:  ", $CellContext`a],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.89177248698915*^9, 3.8917724917973213`*^9}, {
+   3.891772586521865*^9, 3.891772612271682*^9}, 3.891772785918605*^9},
+ CellLabel->
+  "During evaluation of \
+In[181]:=",ExpressionUUID->"f957a7a2-b951-4c51-a10c-3ec3e5f301bd"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Now we substitute d for d=d/2, however mathematica generally dislikes this \
+sort of renaming, so we will just call the coordinate r for convenience, it \
+is still the radius of the galaxy.\
+\>", "Text",
+ CellChangeTimes->{{3.891772616021036*^9, 
+  3.891772656043387*^9}},ExpressionUUID->"72e8699e-0853-4a2f-8f09-\
+75e92354f481"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"d", "=", 
+   RowBox[{"r", "/", "2"}]}], ";"}], "\[IndentingNewLine]", "P"}], "Input",
+ CellChangeTimes->{{3.8917720821468067`*^9, 3.8917720835019608`*^9}, {
+  3.891772661485793*^9, 3.891772676573762*^9}, {3.8917727770390053`*^9, 
+  3.891772777307309*^9}},
+ CellLabel->
+  "In[187]:=",ExpressionUUID->"7da6d7f4-3a93-44b0-8372-b920e6e81b07"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"N", " ", 
+   SuperscriptBox["r", "2"], " ", "\[CapitalPhi]"}], 
+  RowBox[{"4", " ", 
+   SuperscriptBox["R", "3"]}]]], "Output",
+ CellChangeTimes->{3.891772677630031*^9, 3.891772791635807*^9},
+ CellLabel->
+  "Out[188]=",ExpressionUUID->"6417fce8-8394-4a78-b194-26ccefbff256"]
+}, Open  ]],
+
+Cell[TextData[{
+ "We know the term for the absorption factor is given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", "=", 
+    FractionBox[
+     RowBox[{"N", " ", 
+      SuperscriptBox["r", "2"]}], 
+     RowBox[{"2", " ", 
+      SuperscriptBox["R", "3"]}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "837425f6-7827-492c-9a88-07202c42cca6"],
+ "(again r is just d here). So now we can multiply these terms as "
+}], "Text",
+ CellChangeTimes->{{3.891772680593103*^9, 
+  3.891772759938354*^9}},ExpressionUUID->"01e6360f-35fa-4d9d-9869-\
+bab01055c627"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"P", " ", "*", " ", 
+  SuperscriptBox[
+   RowBox[{"(", " ", 
+    FractionBox[
+     RowBox[{"N", " ", 
+      SuperscriptBox["r", "2"]}], 
+     RowBox[{"2", " ", 
+      SuperscriptBox["R", "3"]}]], ")"}], 
+   RowBox[{"-", "1"}]]}]], "Input",
+ CellChangeTimes->{{3.891772247107836*^9, 3.891772285781506*^9}, {
+  3.891772797249909*^9, 3.8917728034647503`*^9}},
+ CellLabel->
+  "In[189]:=",ExpressionUUID->"7fa45c9e-8ff2-4222-8fc0-03bb49bff8e3"],
+
+Cell[BoxData[
+ FractionBox["\[CapitalPhi]", "2"]], "Output",
+ CellChangeTimes->{3.8917722522074833`*^9, 3.891772286666685*^9, 
+  3.891772804752795*^9},
+ CellLabel->
+  "Out[189]=",ExpressionUUID->"da482f72-0f94-4343-8721-bc83e4fa500c"]
+}, Open  ]],
+
+Cell["\<\
+So we still recover the dilution due to redshift by a factor of 1/2.
+Now we can do the temperature calculation given figures we already know.\
+\>", "Text",
+ CellChangeTimes->{{3.891772819791531*^9, 3.891772840815837*^9}, {
+  3.891772982544835*^9, 
+  3.891773009941372*^9}},ExpressionUUID->"f7bfbd7f-74c7-4743-81d7-\
+2cac19f89eab"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"LMW", " ", "=", " ", 
+    RowBox[{"4.2", "*", 
+     SuperscriptBox["10", "36"]}]}], ";"}], "   ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Luminosity", " ", "of", " ", "Milky", " ", "Way", " ", "from", " ", 
+     "\"\<The Local Group of Galaxies\>\""}], " ", "-", " ", 
+    RowBox[{"Sidney", " ", "van", " ", "den", " ", "Bergh"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SO", "   ", "=", " ", 
+    RowBox[{"2.67", "*", 
+     SuperscriptBox["10", "20"]}]}], " ", ";"}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "Radius", " ", "of", " ", "stellar", " ", "orbit", " ", "from", " ", 
+    "\"\<AN UPDATE ON MONITORING STELLAR ORBITS IN THE\[IndentingNewLine]\t\t \
+     GALACTIC CENTER by S. Gillessen\>\""}], "*)"}]}], "\[IndentingNewLine]", 
+
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Phi]E", "   ", "=", " ", 
+    FractionBox["LMW", 
+     RowBox[{"4", " ", "\[Pi]", " ", 
+      SuperscriptBox["SO", "2"]}]]}], ";"}], "       ", 
+  RowBox[{"(*", 
+   RowBox[{"Flux", " ", "in", " ", "stellar", " ", "neighborhood"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "     ", "=", " ", 
+   RowBox[{"5.67", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "8"}]]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.891773019090351*^9, 3.891773046754073*^9}, {
+  3.891773077453945*^9, 3.891773103625636*^9}, {3.891773143861621*^9, 
+  3.891773179610757*^9}, {3.89177321585104*^9, 3.891773273946056*^9}, {
+  3.891773308285369*^9, 3.8917733133567343`*^9}, {3.891773345555674*^9, 
+  3.891773369862338*^9}, {3.891773412253764*^9, 3.891773444849518*^9}, {
+  3.891773533494226*^9, 
+  3.891773588182358*^9}},ExpressionUUID->"a35eb98c-51df-4df4-beaf-\
+301ec32ee422"],
+
+Cell["\<\
+Now we take Stefan Boltzmann to get the following noting that we must divide \
+\[Phi]E by two as dictated by the above.\
+\>", "Text",
+ CellChangeTimes->{{3.891773378308755*^9, 3.891773392124284*^9}, {
+   3.891773486218854*^9, 3.8917735013491592`*^9}, 
+   3.891773601976241*^9},ExpressionUUID->"09dc5fdb-e091-46d1-9a7b-\
+efc592549f79"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"T", "=", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    FractionBox["\[Phi]E", 
+     RowBox[{"2", "\[Sigma]"}]], ")"}], 
+   RowBox[{"1", "/", "4"}]]}]], "Input",
+ CellChangeTimes->{{3.891773398242861*^9, 3.891773409886516*^9}, {
+  3.891773465636065*^9, 3.891773504584079*^9}},
+ CellLabel->
+  "In[211]:=",ExpressionUUID->"2c81296b-ac74-49da-88d3-d9d2117bad2b"],
+
+Cell[BoxData["2.535718051067591`"], "Output",
+ CellChangeTimes->{
+  3.891773507022567*^9, {3.891773570185978*^9, 3.891773580295439*^9}},
+ CellLabel->
+  "Out[211]=",ExpressionUUID->"2db95b7e-f42a-4eb7-8242-78ffb1694c3e"]
+}, Open  ]],
+
+Cell["\<\
+So in general not quite 2.72, however it is still quite close and is highly \
+dependent on the uncertainties in variable LMW and SO.\
+\>", "Text",
+ CellChangeTimes->{{3.8917736188138037`*^9, 
+  3.89177365359993*^9}},ExpressionUUID->"a185efa5-b727-4506-a7a1-\
+5400ac8cdc6b"]
+},
+WindowSize->{901.5, 568.5},
+WindowMargins->{{Automatic, 22.5}, {Automatic, 75}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7c96e676-5bdc-4d8a-a0c1-2706c2c5ec6e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 297, 6, 58, "Text",ExpressionUUID->"68f9e192-472d-4877-9557-06967bda3e09"],
+Cell[858, 28, 1719, 42, 145, "Input",ExpressionUUID->"72334625-5e7f-4964-a4e0-a8f34dc85a5d"],
+Cell[2580, 72, 419, 9, 32, "Input",ExpressionUUID->"612f6775-cc5d-482e-aa3f-9b85582d6830"],
+Cell[CellGroupData[{
+Cell[3024, 85, 215, 4, 32, "Input",ExpressionUUID->"d787393d-ca7b-4104-b5f2-cb6075ce8b5b"],
+Cell[3242, 91, 726, 17, 61, "Output",ExpressionUUID->"48cdc964-3cba-40a0-ad10-722131ee2b78"]
+}, Open  ]],
+Cell[3983, 111, 224, 5, 32, "Input",ExpressionUUID->"fdbd13f3-41a1-48a3-9650-8d9f001a932f"],
+Cell[CellGroupData[{
+Cell[4232, 120, 1384, 35, 164, "Input",ExpressionUUID->"8adbc02a-2576-45f0-baeb-bce68a64548d"],
+Cell[CellGroupData[{
+Cell[5641, 159, 620, 15, 43, "Print",ExpressionUUID->"18f10d02-1cef-429f-9a70-c3d8fac3e871"],
+Cell[6264, 176, 598, 14, 25, "Print",ExpressionUUID->"569cc352-93ad-4131-a4cd-53c6df5b16dc"],
+Cell[6865, 192, 448, 9, 25, "Print",ExpressionUUID->"f957a7a2-b951-4c51-a10c-3ec3e5f301bd"]
+}, Open  ]]
+}, Open  ]],
+Cell[7340, 205, 339, 7, 58, "Text",ExpressionUUID->"72e8699e-0853-4a2f-8f09-75e92354f481"],
+Cell[CellGroupData[{
+Cell[7704, 216, 374, 8, 51, "Input",ExpressionUUID->"7da6d7f4-3a93-44b0-8372-b920e6e81b07"],
+Cell[8081, 226, 313, 8, 60, "Output",ExpressionUUID->"6417fce8-8394-4a78-b194-26ccefbff256"]
+}, Open  ]],
+Cell[8409, 237, 582, 16, 48, "Text",ExpressionUUID->"01e6360f-35fa-4d9d-9869-bab01055c627"],
+Cell[CellGroupData[{
+Cell[9016, 257, 462, 13, 56, "Input",ExpressionUUID->"7fa45c9e-8ff2-4222-8fc0-03bb49bff8e3"],
+Cell[9481, 272, 234, 5, 47, "Output",ExpressionUUID->"da482f72-0f94-4343-8721-bc83e4fa500c"]
+}, Open  ]],
+Cell[9730, 280, 340, 7, 58, "Text",ExpressionUUID->"f7bfbd7f-74c7-4743-81d7-2cac19f89eab"],
+Cell[10073, 289, 1739, 45, 142, "Input",ExpressionUUID->"a35eb98c-51df-4df4-beaf-301ec32ee422"],
+Cell[11815, 336, 344, 7, 35, "Text",ExpressionUUID->"09dc5fdb-e091-46d1-9a7b-efc592549f79"],
+Cell[CellGroupData[{
+Cell[12184, 347, 376, 10, 55, "Input",ExpressionUUID->"2c81296b-ac74-49da-88d3-d9d2117bad2b"],
+Cell[12563, 359, 219, 4, 33, "Output",ExpressionUUID->"2db95b7e-f42a-4eb7-8242-78ffb1694c3e"]
+}, Open  ]],
+Cell[12797, 366, 283, 6, 35, "Text",ExpressionUUID->"a185efa5-b727-4506-a7a1-5400ac8cdc6b"]
+}
+]
+*)
+

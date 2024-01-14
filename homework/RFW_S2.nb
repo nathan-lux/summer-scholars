@@ -1,0 +1,382 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17275,        374]
+NotebookOptionsPosition[     15593,        341]
+NotebookOutlinePosition[     15989,        357]
+CellTagsIndexPosition[     15946,        354]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"test", " ", "with", " ", 
+    SuperscriptBox["S", "2"]}], " ", "*)"}], " ", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "Print", "[", 
+    "\"\<F-R-W metric for \!\(\*SuperscriptBox[\(S\), \(2\)]\): \
+\!\(\*SuperscriptBox[\(ds\), \(2\)]\) = \!\(\*SuperscriptBox[\(R\), \(2\)]\){\
+\!\(\*SuperscriptBox[\(dr\), \(2\)]\)/(1-\!\(\*SuperscriptBox[\(r\), \
+\(2\)]\)) + \!\(\*SuperscriptBox[\(r\), \
+\(2\)]\)\!\(\*SuperscriptBox[\(d\[Phi]\), \(2\)]\)}\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<or, \!\(\*SuperscriptBox[\(ds\), \(2\)]\) = \
+(\!\(\*SuperscriptBox[\(R\), \(2\)]\)/(1-\!\(\*SuperscriptBox[\(r\), \
+\(2\)]\)))\!\(\*SuperscriptBox[\(dr\), \(2\)]\) + \!\(\*SuperscriptBox[\(R\), \
+\(\(2\)\(\\\ \)\)]\)\!\(\*SuperscriptBox[\(r\), \(2\)]\)\!\(\*SuperscriptBox[\
+\(d\[Phi]\), \(2\)]\) = \!\(\*SuperscriptBox[\(a\), \(\(2\)\(\\\ \
+\)\)]\)\!\(\*SuperscriptBox[\(dr\), \(2\)]\)+\!\(\*SuperscriptBox[\(b\), \
+\(2\)]\)\!\(\*SuperscriptBox[\(d\[Phi]\), \(2\)]\)\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<the volume element for \!\(\*SuperscriptBox[\(S\), \(2\)]\) in these \
+coordinates is: dV = adr bd\[Phi] = (ab)drd\[Phi]\nin Mathematica the \
+integrand is (ab) and the integration is over r and \[Phi], for example\narea \
+= 2 Integrate[\!\(\*SuperscriptBox[\(R\), \
+\(2\)]\)/Sqrt[1-\!\(\*SuperscriptBox[\(r\), \(2\)]\)]r ,{r,0,1},{\[Phi],0,2\
+\[Pi]}]\>\"", "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", " ", 
+    "\"\<F-R-W metric for \!\(\*SuperscriptBox[\(S\), \(2\)]\); area of \
+sphere \!\(\*SuperscriptBox[\(S\), \(2\)]\) with r \[Element](-1,1) \[Phi] \
+\[Element](0,2\[Pi])\>\"", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"Abs", "[", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["R", "2"], "/", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["r", "2"]}], "]"}]}], "r"}], " ", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<2 x integral with r \[Element](0,1) \[Phi] \[Element](0,2\[Pi])\>\"",
+     "]"}], "\[IndentingNewLine]", 
+   RowBox[{"2", " ", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["R", "2"], "/", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["r", "2"]}], "]"}]}], "r"}], " ", ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Phi]", ",", "0", ",", 
+        RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<\nfind the area of a curved manifold \!\(\*SuperscriptBox[\(S\), \(2\
+\)]\) of radius R: \ntake a set of circles \!\(\*SuperscriptBox[\(S\), \(1\)]\
+\) of circumference \ns = 2 \[Pi] r, with increasing radius r, and integrate \
+along the path over\na great circle of a ball in \!\(\*SuperscriptBox[\(R\), \
+\(3\)]\) with radius R, with ds = R d\[Theta]; with sin \[Theta]=r/R \nthus \
+the integration is \[Integral]2 \[Pi] \!\(\*SuperscriptBox[\(R\), \(2\)]\) \
+sin \[Theta] d\[Theta] with  \[Theta] \[Element](0,\[Pi]) \>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"2", " ", "\[Pi]", " ", 
+      SuperscriptBox["R", "2"], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"%", "//", "N"}]}]}]], "Input",
+ CellChangeTimes->{{3.83353305804552*^9, 3.8335331266114607`*^9}, {
+   3.833533184496168*^9, 3.833533235818192*^9}, 3.833533360455453*^9, 
+   3.8335333926636963`*^9, {3.833533772116263*^9, 3.833533816028165*^9}, {
+   3.833534102689405*^9, 3.8335341443953257`*^9}, {3.833534180635805*^9, 
+   3.8335342316885777`*^9}, {3.833534264979301*^9, 3.833534270775964*^9}, {
+   3.833534330316594*^9, 3.833534412745973*^9}, {3.833534486944478*^9, 
+   3.833534527796009*^9}, {3.833534562305497*^9, 3.833534562863802*^9}, {
+   3.833534603996854*^9, 3.833534649509576*^9}, {3.833534690461623*^9, 
+   3.833534693706946*^9}, {3.83353476386901*^9, 3.833534771001081*^9}, 
+   3.833534962409502*^9, {3.833535078404894*^9, 3.83353508420605*^9}, {
+   3.833535407826861*^9, 3.8335354719925623`*^9}, {3.8335355165956383`*^9, 
+   3.833535747540604*^9}, {3.833648995545659*^9, 3.8336491159347057`*^9}, {
+   3.833649182779132*^9, 3.833649267289671*^9}, {3.833649465163514*^9, 
+   3.833649552642037*^9}, {3.8336496080243053`*^9, 3.833649611808552*^9}, {
+   3.834756834038382*^9, 3.834756838288891*^9}, 3.8347569043651114`*^9, {
+   3.850996765097196*^9, 3.850996901620123*^9}, {3.850998009869239*^9, 
+   3.850998025693709*^9}, {3.8510000286277018`*^9, 3.851000079102044*^9}, {
+   3.851000255050111*^9, 3.851000262001029*^9}, {3.8510003568301086`*^9, 
+   3.85100036025506*^9}, {3.851000420164583*^9, 3.851000473111863*^9}, {
+   3.863713871127639*^9, 3.863714264141735*^9}, {3.86371431249625*^9, 
+   3.863714320080305*^9}, {3.863714366123287*^9, 3.86371448867332*^9}, {
+   3.86371453622927*^9, 3.8637146971099663`*^9}, {3.863714741862651*^9, 
+   3.863714780381608*^9}},
+ CellLabel->
+  "In[121]:=",ExpressionUUID->"609d5f1e-1cf0-4fc8-b7bc-7c43d737f479"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"F-R-W metric for \\!\\(\\*SuperscriptBox[\\(S\\), \
+\\(2\\)]\\): \\!\\(\\*SuperscriptBox[\\(ds\\), \\(2\\)]\\) = \
+\\!\\(\\*SuperscriptBox[\\(R\\), \
+\\(2\\)]\\){\\!\\(\\*SuperscriptBox[\\(dr\\), \
+\\(2\\)]\\)/(1-\\!\\(\\*SuperscriptBox[\\(r\\), \\(2\\)]\\)) + \
+\\!\\(\\*SuperscriptBox[\\(r\\), \
+\\(2\\)]\\)\\!\\(\\*SuperscriptBox[\\(d\[Phi]\\), \\(2\\)]\\)}\"\>"], "Print",\
+
+ CellChangeTimes->{
+  3.8510004770226316`*^9, {3.863714302075098*^9, 3.863714322990107*^9}, 
+   3.863714423639481*^9, {3.863714468974577*^9, 3.863714491874464*^9}, 
+   3.863714575100915*^9, {3.86371467126928*^9, 3.86371470130793*^9}, 
+   3.863714751127084*^9, 3.863714784897254*^9},
+ CellLabel->
+  "During evaluation of \
+In[121]:=",ExpressionUUID->"09166914-c265-49d9-a107-42cfc0ef9499"],
+
+Cell[BoxData["\<\"or, \\!\\(\\*SuperscriptBox[\\(ds\\), \\(2\\)]\\) = (\\!\\(\
+\\*SuperscriptBox[\\(R\\), \\(2\\)]\\)/(1-\\!\\(\\*SuperscriptBox[\\(r\\), \
+\\(2\\)]\\)))\\!\\(\\*SuperscriptBox[\\(dr\\), \\(2\\)]\\) + \
+\\!\\(\\*SuperscriptBox[\\(R\\), \\(\\(2\\)\\(\\\\ \
+\\)\\)]\\)\\!\\(\\*SuperscriptBox[\\(r\\), \
+\\(2\\)]\\)\\!\\(\\*SuperscriptBox[\\(d\[Phi]\\), \\(2\\)]\\) = \
+\\!\\(\\*SuperscriptBox[\\(a\\), \\(\\(2\\)\\(\\\\ \
+\\)\\)]\\)\\!\\(\\*SuperscriptBox[\\(dr\\), \
+\\(2\\)]\\)+\\!\\(\\*SuperscriptBox[\\(b\\), \
+\\(2\\)]\\)\\!\\(\\*SuperscriptBox[\\(d\[Phi]\\), \\(2\\)]\\)\"\>"], "Print",
+ CellChangeTimes->{
+  3.8510004770226316`*^9, {3.863714302075098*^9, 3.863714322990107*^9}, 
+   3.863714423639481*^9, {3.863714468974577*^9, 3.863714491874464*^9}, 
+   3.863714575100915*^9, {3.86371467126928*^9, 3.86371470130793*^9}, 
+   3.863714751127084*^9, 3.863714784900558*^9},
+ CellLabel->
+  "During evaluation of \
+In[121]:=",ExpressionUUID->"281939e2-eb28-4d1d-a661-01e3dda27333"],
+
+Cell[BoxData["\<\"the volume element for \\!\\(\\*SuperscriptBox[\\(S\\), \
+\\(2\\)]\\) in these coordinates is: dV = adr bd\[Phi] = (ab)drd\[Phi]\\nin \
+Mathematica the integrand is (ab) and the integration is over r and \[Phi], \
+for example\\narea = 2 Integrate[\\!\\(\\*SuperscriptBox[\\(R\\), \
+\\(2\\)]\\)/Sqrt[1-\\!\\(\\*SuperscriptBox[\\(r\\), \\(2\\)]\\)]r ,{r,0,1},{\
+\[Phi],0,2\[Pi]}]\"\>"], "Print",
+ CellChangeTimes->{
+  3.8510004770226316`*^9, {3.863714302075098*^9, 3.863714322990107*^9}, 
+   3.863714423639481*^9, {3.863714468974577*^9, 3.863714491874464*^9}, 
+   3.863714575100915*^9, {3.86371467126928*^9, 3.86371470130793*^9}, 
+   3.863714751127084*^9, 3.8637147849044943`*^9},
+ CellLabel->
+  "During evaluation of \
+In[121]:=",ExpressionUUID->"dc7e3149-87ed-405e-b7eb-3f6f1adb7ad5"],
+
+Cell[BoxData["\<\"F-R-W metric for \\!\\(\\*SuperscriptBox[\\(S\\), \
+\\(2\\)]\\); area of sphere \\!\\(\\*SuperscriptBox[\\(S\\), \\(2\\)]\\) with \
+r \[Element](-1,1) \[Phi] \[Element](0,2\[Pi])\"\>"], "Print",
+ CellChangeTimes->{
+  3.8510004770226316`*^9, {3.863714302075098*^9, 3.863714322990107*^9}, 
+   3.863714423639481*^9, {3.863714468974577*^9, 3.863714491874464*^9}, 
+   3.863714575100915*^9, {3.86371467126928*^9, 3.86371470130793*^9}, 
+   3.863714751127084*^9, 3.863714784906742*^9},
+ CellLabel->
+  "During evaluation of \
+In[121]:=",ExpressionUUID->"fe23f31d-033c-416d-953b-08cef2e89510"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"4", " ", "\[Pi]", " ", 
+  SuperscriptBox[
+   RowBox[{"Abs", "[", "R", "]"}], "2"]}]], "Output",
+ CellChangeTimes->{
+  3.85100047777149*^9, {3.863714303507802*^9, 3.863714323724011*^9}, 
+   3.8637144243573713`*^9, {3.863714469703781*^9, 3.863714492600741*^9}, 
+   3.863714575827981*^9, {3.863714671989707*^9, 3.863714702042046*^9}, 
+   3.863714751863913*^9, 3.863714785758519*^9},
+ CellLabel->
+  "Out[125]=",ExpressionUUID->"6a6f8650-126f-4385-baa7-4572dab9da11"],
+
+Cell[BoxData["\<\"2 x integral with r \[Element](0,1) \[Phi] \[Element](0,2\
+\[Pi])\"\>"], "Print",
+ CellChangeTimes->{
+  3.8510004770226316`*^9, {3.863714302075098*^9, 3.863714322990107*^9}, 
+   3.863714423639481*^9, {3.863714468974577*^9, 3.863714491874464*^9}, 
+   3.863714575100915*^9, {3.86371467126928*^9, 3.86371470130793*^9}, 
+   3.863714751127084*^9, 3.8637147857614307`*^9},
+ CellLabel->
+  "During evaluation of \
+In[121]:=",ExpressionUUID->"1c00c630-f0f5-4ce3-9d34-9f6d649f3ca2"],
+
+Cell[BoxData[
+ RowBox[{"4", " ", "\[Pi]", " ", 
+  SuperscriptBox["R", "2"]}]], "Output",
+ CellChangeTimes->{
+  3.85100047777149*^9, {3.863714303507802*^9, 3.863714323724011*^9}, 
+   3.8637144243573713`*^9, {3.863714469703781*^9, 3.863714492600741*^9}, 
+   3.863714575827981*^9, {3.863714671989707*^9, 3.863714702042046*^9}, 
+   3.863714751863913*^9, 3.8637147872972937`*^9},
+ CellLabel->
+  "Out[127]=",ExpressionUUID->"64f95df2-3276-4669-8cf0-d121152803d6"],
+
+Cell[BoxData["\<\"\\nfind the area of a curved manifold \
+\\!\\(\\*SuperscriptBox[\\(S\\), \\(2\\)]\\) of radius R: \\ntake a set of \
+circles \\!\\(\\*SuperscriptBox[\\(S\\), \\(1\\)]\\) of circumference \\ns = \
+2 \[Pi] r, with increasing radius r, and integrate along the path over\\na \
+great circle of a ball in \\!\\(\\*SuperscriptBox[\\(R\\), \\(3\\)]\\) with \
+radius R, with ds = R d\[Theta]; with sin \[Theta]=r/R \\nthus the \
+integration is \[Integral]2 \[Pi] \\!\\(\\*SuperscriptBox[\\(R\\), \
+\\(2\\)]\\) sin \[Theta] d\[Theta] with  \[Theta] \[Element](0,\[Pi]) \"\>"], \
+"Print",
+ CellChangeTimes->{
+  3.8510004770226316`*^9, {3.863714302075098*^9, 3.863714322990107*^9}, 
+   3.863714423639481*^9, {3.863714468974577*^9, 3.863714491874464*^9}, 
+   3.863714575100915*^9, {3.86371467126928*^9, 3.86371470130793*^9}, 
+   3.863714751127084*^9, 3.863714787299304*^9},
+ CellLabel->
+  "During evaluation of \
+In[121]:=",ExpressionUUID->"f4bd34f0-cc56-41a7-9a9a-63a1955006b1"],
+
+Cell[BoxData[
+ RowBox[{"4", " ", "\[Pi]", " ", 
+  SuperscriptBox["R", "2"]}]], "Output",
+ CellChangeTimes->{
+  3.85100047777149*^9, {3.863714303507802*^9, 3.863714323724011*^9}, 
+   3.8637144243573713`*^9, {3.863714469703781*^9, 3.863714492600741*^9}, 
+   3.863714575827981*^9, {3.863714671989707*^9, 3.863714702042046*^9}, 
+   3.863714751863913*^9, 3.863714787325947*^9},
+ CellLabel->
+  "Out[129]=",ExpressionUUID->"a79c711d-3c26-4c15-b13b-d118212b5aae"],
+
+Cell[BoxData[
+ RowBox[{"12.566370614359172`", " ", 
+  SuperscriptBox["R", "2"]}]], "Output",
+ CellChangeTimes->{
+  3.85100047777149*^9, {3.863714303507802*^9, 3.863714323724011*^9}, 
+   3.8637144243573713`*^9, {3.863714469703781*^9, 3.863714492600741*^9}, 
+   3.863714575827981*^9, {3.863714671989707*^9, 3.863714702042046*^9}, 
+   3.863714751863913*^9, 3.863714787327956*^9},
+ CellLabel->
+  "Out[130]=",ExpressionUUID->"98151f9d-b155-4592-a6b2-9ea1e76b38e1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Print", "[", 
+  "\"\< now take R-W'metric for \!\(\*SuperscriptBox[\(S\), \(2\)]\); area of \
+sphere \!\(\*SuperscriptBox[\(S\), \(2\)]\)\nand change the variables from r \
+to \[Rho]=l/R, with r=sin(\[Rho])\n\!\(\*SuperscriptBox[\(R\), \
+\(2\)]\)/Sqrt[1-\!\(\*SuperscriptBox[\(r\), \(2\)]\)]r drd\[Phi] becomes \!\(\
+\*SuperscriptBox[\(R\), \(2\)]\)sin(\[Rho])d\[Rho]d\[Phi]; integrate \[Rho] \
+\[Element](0,\[Pi])and \[Phi] \[Element](0,2\[Pi]) and multiply x 2\>\"", 
+  "]"}], "\n", 
+ RowBox[{"2", " ", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["R", "2"], 
+     RowBox[{"Sin", "[", "\[Rho]", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Rho]", ",", "0", ",", 
+      RowBox[{"\[Pi]", "/", "2"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Phi]", ",", "0", ",", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}], "\n"}], "Input",
+ CellChangeTimes->{{3.850997567810287*^9, 3.850997623643622*^9}, {
+  3.8509976705550756`*^9, 3.850997842800562*^9}, {3.850997889014287*^9, 
+  3.850997996086038*^9}, {3.85100014596465*^9, 3.851000156396079*^9}, {
+  3.851000198827689*^9, 3.8510002044771338`*^9}, {3.851000272694613*^9, 
+  3.8510003008163347`*^9}},
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"a3c0e972-ab0c-4a3a-8c18-5728be5e8ccd"],
+
+Cell[BoxData["\<\" now take R-W'metric for \\!\\(\\*SuperscriptBox[\\(S\\), \
+\\(2\\)]\\); area of sphere \\!\\(\\*SuperscriptBox[\\(S\\), \
+\\(2\\)]\\)\\nand change the variables from r to \[Rho]=l/R, with \
+r=sin(\[Rho])\\n\\!\\(\\*SuperscriptBox[\\(R\\), \
+\\(2\\)]\\)/Sqrt[1-\\!\\(\\*SuperscriptBox[\\(r\\), \\(2\\)]\\)]r drd\[Phi] \
+becomes \\!\\(\\*SuperscriptBox[\\(R\\), \
+\\(2\\)]\\)sin(\[Rho])d\[Rho]d\[Phi]; integrate \[Rho] \[Element](0,\[Pi])and \
+\[Phi] \[Element](0,2\[Pi]) and multiply x 2\"\>"], "Print",
+ CellChangeTimes->{
+  3.850997849666361*^9, {3.8509979015908957`*^9, 3.850997922396649*^9}, 
+   3.851000326343762*^9, {3.863714305728334*^9, 3.8637143255421667`*^9}, 
+   3.863714426018845*^9, {3.863714471331624*^9, 3.86371449422264*^9}, 
+   3.86371457742528*^9, {3.863714673562193*^9, 3.863714703636353*^9}, 
+   3.863714753448875*^9, 3.863714787374655*^9},
+ CellLabel->
+  "During evaluation of \
+In[131]:=",ExpressionUUID->"dbdbd481-abbc-449f-a926-8429b6c259f3"],
+
+Cell[BoxData[
+ RowBox[{"4", " ", "\[Pi]", " ", 
+  SuperscriptBox["R", "2"]}]], "Output",
+ CellChangeTimes->{
+  3.850997849670232*^9, {3.8509979015945473`*^9, 3.850997922421566*^9}, 
+   3.8510003263532667`*^9, {3.8637143057602177`*^9, 3.8637143255446177`*^9}, 
+   3.863714426021434*^9, {3.863714471334313*^9, 3.863714494254081*^9}, 
+   3.863714577428926*^9, {3.863714673570384*^9, 3.8637147036454563`*^9}, 
+   3.863714753457273*^9, 3.8637147873839912`*^9},
+ CellLabel->
+  "Out[132]=",ExpressionUUID->"23b99106-e112-48ae-b435-62a6eec987d1"]
+}, Open  ]]
+},
+WindowSize->{808, 811},
+WindowMargins->{{177, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"aa3a62ec-914d-4c56-b467-7f2b274c4ab9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 5561, 114, 429, "Input",ExpressionUUID->"609d5f1e-1cf0-4fc8-b7bc-7c43d737f479"],
+Cell[CellGroupData[{
+Cell[6166, 140, 785, 15, 25, "Print",ExpressionUUID->"09166914-c265-49d9-a107-42cfc0ef9499"],
+Cell[6954, 157, 995, 17, 25, "Print",ExpressionUUID->"281939e2-eb28-4d1d-a661-01e3dda27333"],
+Cell[7952, 176, 802, 13, 65, "Print",ExpressionUUID->"dc7e3149-87ed-405e-b7eb-3f6f1adb7ad5"],
+Cell[8757, 191, 601, 10, 25, "Print",ExpressionUUID->"fe23f31d-033c-416d-953b-08cef2e89510"]
+}, Open  ]],
+Cell[9373, 204, 486, 10, 34, "Output",ExpressionUUID->"6a6f8650-126f-4385-baa7-4572dab9da11"],
+Cell[9862, 216, 490, 9, 24, "Print",ExpressionUUID->"1c00c630-f0f5-4ce3-9d34-9f6d649f3ca2"],
+Cell[10355, 227, 457, 9, 34, "Output",ExpressionUUID->"64f95df2-3276-4669-8cf0-d121152803d6"],
+Cell[10815, 238, 984, 16, 124, "Print",ExpressionUUID->"f4bd34f0-cc56-41a7-9a9a-63a1955006b1"],
+Cell[11802, 256, 455, 9, 34, "Output",ExpressionUUID->"a79c711d-3c26-4c15-b13b-d118212b5aae"],
+Cell[12260, 267, 459, 9, 34, "Output",ExpressionUUID->"98151f9d-b155-4592-a6b2-9ea1e76b38e1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12756, 281, 1293, 27, 142, "Input",ExpressionUUID->"a3c0e972-ab0c-4a3a-8c18-5728be5e8ccd"],
+Cell[14052, 310, 984, 16, 65, "Print",ExpressionUUID->"dbdbd481-abbc-449f-a926-8429b6c259f3"],
+Cell[15039, 328, 538, 10, 34, "Output",ExpressionUUID->"23b99106-e112-48ae-b435-62a6eec987d1"]
+}, Open  ]]
+}
+]
+*)
+
