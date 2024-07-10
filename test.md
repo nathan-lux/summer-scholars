@@ -1,6 +1,6 @@
 # Tuesday July 9
 ---
-tl;dr - my main questions are if Legendre polynomial expansion makes sense given that we are in the small angle approximation and $$\mu \approx 1$$ and also if there is a sensible interpretation to invoking spherical harmonics (for example as a substitution of the Legendre polynomials) in the flat sky case or if there isn't a good notion of what it means to do that.
+tl;dr - my main questions are if Legendre polynomial expansion makes sense given that we are in the small angle approximation and $\mu \approx 1$ and also if there is a sensible interpretation to invoking spherical harmonics (for example as a substitution of the Legendre polynomials) in the flat sky case or if there isn't a good notion of what it means to do that.
 
 I've been working more on the flat sky approximation. I'll post some highlights of the calculation so you can see how it's going and then I'll ask a couple questions which might have pretty straightforward answers. In working on this bit, I've sort of walked down a couple paths which have all led to varying amounts of confusion.
 
