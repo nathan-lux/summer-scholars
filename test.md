@@ -14,9 +14,9 @@ $$
 
 So we can substitute in the Fourier transform into the expectation value and then integrate over $`l'`$ which yields a delta function on $`x'_{\perp}`$ effectively forcing two integrals to vanish. After that we are left with
 
-$$
+$$`
 P_{\tilde{A}\tilde{B}}(\vec{l})=\int d^{2}x_{\perp}e^{-i \vec{l}\cdot \vec{x}_{\perp}}\int \int dx_{\parallel}dx_{\parallel}'F_{A}(x_{\parallel})F_{B}(x_{\parallel}')\int \frac{d^3k}{(2\pi)^{3}}P_{AB}(k,\hat{k}\cdot \hat{z})e^{i \vec{k}\cdot(\vec{x}-\vec{x}')} 
-$$
+`$$
 
 $`\vec{x}`$ here is the full 3D vector (ie something like $`\langle x_{\parallel},x_{\perp_{1}},x_{\perp_{2}} \rangle`$) and $`\vec{k}`$ is the 3D Fourier conjugate to this vector $`\vec{x}`$. From here I am sort of split.
 
@@ -28,9 +28,9 @@ On one hand, if I take this and run with it then the next step would be to use t
 
 The other path I poked was to investigate what happens if I just leave that last integral alone and substitute the power spectrum for its Legendre series expansion. This also led me down a somewhat confused path, though. Immediately one can write that 
 
-$$
+$`
 P_{AB}(k,\mu)=\sum_{\ell}\mathcal{L}_{\ell}(\mu)P_{AB,\ell}=\sum_{\ell}\mathcal{L}_{\ell}(\mu)\frac{2\ell+1}{2}\int d\mu \;\mathcal{L}_{\ell}(\mu)P_{AB}(k,\mu) 
-$$
+`$
 
 Where $`\mu=\cos(\theta)=\hat{k}\cdot \hat{z}`$.  My confusion is that if $`\theta`$ is supposed to be the angle between the LOS vector and $`\vec{k}`$ which should be along $`\vec{x}`$ then shouldn't the small angle approximation apply here and we can just say $`\mu \approx 1`$? At which point a lot of the Legendre polynomial expansion stuff seems to lose some meaning for me. Particularly when it comes to trying to simplify the coefficients because the whole setup for the integral is based on $`\mu`$.
 
