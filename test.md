@@ -6,7 +6,7 @@ I've been working more on the flat sky approximation. I'll post some highlights 
 
 **The calculation**
 
-We start with two projected fields $$\tilde{A}(\vec{x}_{\perp})=\int F_{A}(x_{\parallel})A(x_{\parallel},\vec{x}_{\perp})) \, dx_{\parallel}$ and a similar field named $\tilde{B}(\vec{x}_{\perp})$$. We Fourier transform them in the "perp" plane via a 2D Fourier transform. After this we will have both fields in a handy form and can consider $$\langle \tilde{A}(\vec{l})\tilde{B}^{*}(\vec{l}') \rangle$$ (here $$\vec{l}$$ is the 2D Fourier conjugate to $$\vec{x}_{\perp}$$) as we know
+We start with two projected fields $\tilde{A}(\vec{x}_{\perp})=\int F_{A}(x_{\parallel})A(x_{\parallel},\vec{x}_{\perp})) \, dx_{\parallel}$ and a similar field named $\tilde{B}(\vec{x}_{\perp})$. We Fourier transform them in the "perp" plane via a 2D Fourier transform. After this we will have both fields in a handy form and can consider $$\langle \tilde{A}(\vec{l})\tilde{B}^{*}(\vec{l}') \rangle$$ (here $$\vec{l}$$ is the 2D Fourier conjugate to $$\vec{x}_{\perp}$$) as we know
 
 $$
 P_{\tilde{A}\tilde{B}}(\vec{l})=\frac{1}{(2\pi)^{2}}\int d^2l'\langle \tilde{A}(\vec{l})\tilde{B}^{*}(\vec{l}) \rangle  
